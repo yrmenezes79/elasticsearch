@@ -1,0 +1,30 @@
+{
+  "index": { "_index": "livraria", "_id": 1 }
+}
+{
+  "titulo": "O Guia do Mochileiro das Galáxias",
+  "autor": "Douglas Adams",
+  "ano_publicacao": 1979,
+  "genero": "Ficção Científica",
+  "avaliacao": 4.7
+}
+{
+  "index": { "_index": "livraria", "_id": 2 }
+}
+{
+  "titulo": "1984",
+  "autor": "George Orwell",
+  "ano_publicacao": 1949,
+  "genero": "Distopia",
+  "avaliacao": 4.9
+}
+{
+  "index": { "_index": "livraria", "_id": 3 }
+}
+{
+  "titulo": "O Senhor dos Anéis",
+  "autor": "J.R.R. Tolkien",
+  "ano_publicacao": 1954,
+  "genero": "Fantasia",
+  "avaliacao": 4.8
+}
