@@ -1,21 +1,21 @@
-Atualize o índice de pacotes:
+#Atualize o índice de pacotes:
 sudo apt update
 
-Instale as dependências:
+#Instale as dependências:
 sudo apt install apt-transport-https ca-certificates wget
 
-Adicione a chave pública do repositório Elasticsearch:
+#Adicione a chave pública do repositório Elasticsearch:
 wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
 
-Adicione o repositório do Elasticsearch ao seu sistema:
+#Adicione o repositório do Elasticsearch ao seu sistema:
 echo "deb https://artifacts.elastic.co/packages/8.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-8.x.list
 
-Atualize o índice de pacotes:
+#Atualize o índice de pacotes:
 sudo apt update
 
-Instale o Elasticsearch:
-sudo apt install elasticsearch
-
+#Instale o Elasticsearch:
+sudo apt install elasticsearch jq
+exit 0
 #########
 cluster.name: elastic
 node.name: 192.168.86.144
@@ -43,8 +43,8 @@ http.host: 0.0.0.0
 #######################
 start elasticsearch
 
- 60  cd /usr/share/elasticsearch/bin/
-   63  ./elasticsearch-reset-password -u elastic
+cd /usr/share/elasticsearch/bin/
+./elasticsearch-reset-password -u elastic
 
-   https://192.168.86.144:9200/
+https://192.168.86.144:9200/
 
