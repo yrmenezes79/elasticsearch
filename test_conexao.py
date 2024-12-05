@@ -1,4 +1,9 @@
 from elasticsearch import Elasticsearch
+import warnings
+from urllib3.exceptions import InsecureRequestWarning
+
+# Suprimir avisos de certificado inseguro
+warnings.filterwarnings("ignore", category=InsecureRequestWarning)
 
 # Configurações do Elasticsearch
 ELASTIC_IP = "192.168.86.142"
@@ -6,14 +11,12 @@ ELASTIC_PORT = 9200
 USERNAME = "elastic"
 PASSWORD = "XXXX"
 
-# Conexão com o Elasticsearch usando HTTPS e ignorando o certificado
 es = Elasticsearch(
     f"https://{ELASTIC_IP}:{ELASTIC_PORT}",
     basic_auth=(USERNAME, PASSWORD),
     verify_certs=False  # Ignora a verificação do certificado SSL
 )
 
-# Testando a comunicação
 try:
     if es.ping():
         print("Conexão bem-sucedida com o Elasticsearch!")
